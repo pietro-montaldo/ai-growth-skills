@@ -1,0 +1,43 @@
+{
+  "name": "ai-growth-skills",
+  "owner": {
+    "name": "NotLinear",
+    "url": "https://www.notlinear.ai"
+  },
+  "metadata": {
+    "description": "Commercial Claude skills from the AI Growth Systems Bootcamp: LinkedIn, newsletter, sales calls, prospecting and skill building. Pair them with the GTM Context Kit.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "linkedin",
+      "source": "./plugins/linkedin",
+      "description": "Write and review LinkedIn posts, track what works each week, turn calls into posts, and turn a post's commenters into a ranked lead list.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "newsletter",
+      "source": "./plugins/newsletter",
+      "description": "Turn your raw notes, links and posts into a newsletter edition with subject lines, in your own voice.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "sales-calls",
+      "source": "./plugins/sales-calls",
+      "description": "Prepare for sales calls, coach yourself after them, write the follow-up and the proposal, follow up after webinars, and triage inbound interest.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "prospecting",
+      "source": "./plugins/prospecting",
+      "description": "Find where your buyers are and who is worth contacting: Reddit communities and threads, ranked lead lists against your ICP, and personas from form or webinar sign-ups.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "skill-building",
+      "source": "./plugins/skill-building",
+      "description": "Audit your own Claude skills and upgrade older ones for Claude 5 models.",
+      "version": "0.1.0"
+    }
+  ]
+}

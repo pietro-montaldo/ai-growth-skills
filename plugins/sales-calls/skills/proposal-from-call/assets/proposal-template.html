@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE, e.g. Sales onboarding proposal for Acme}}</title>
+<style>
+  /* Set your brand here. Defaults are neutral. Never use the client's brand. */
+  :root{
+    --accent:#2F6FEB; --dark:#111827; --ink:#374151; --muted:#6B7280;
+    --soft:#F5F6F8; --box:#EEF3FD; --line:#E5E7EB;
+    --font-head:'Inter','Helvetica Neue',Arial,sans-serif;
+    --font-body:'Inter','Helvetica Neue',Arial,sans-serif;
+  }
+  @page{size:A4;margin:18mm 18mm 20mm}
+  /* Page footer: your company name and page number. Margin boxes cannot read the variables above, so edit the font here too. */
+  @page{@bottom-left{content:"{{YOUR_COMPANY}}";font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:8pt;color:#6B7280}
+        @bottom-right{content:counter(page);font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:8pt;color:#6B7280}}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font-body);color:var(--ink);font-size:10pt;line-height:1.55;background:#fff}
+  .sheet{max-width:210mm;margin:0 auto;padding:0 4mm}
+  h1,h2,h3{font-family:var(--font-head);color:var(--dark);line-height:1.2}
+  h1{font-size:28pt;margin-bottom:4mm}
+  h2{font-size:15pt;margin:9mm 0 4mm;padding-top:3mm;border-top:3px solid var(--accent);width:fit-content}
+  h3{font-size:11pt;margin:5mm 0 2mm}
+  p{margin-bottom:3mm}
+  ul{margin:0 0 3mm 5mm}
+  li{margin-bottom:1.5mm}
+  .two-col{columns:2;column-gap:8mm}
+  .two-col li{break-inside:avoid}
+  .page-break{break-before:page}
+
+  .cover{min-height:240mm;display:flex;flex-direction:column;justify-content:space-between;padding-top:20mm}
+  .cover .mark img{max-height:14mm}
+  .cover .mark span{font-size:10pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--dark)}
+  .cover .sub{font-size:13pt;color:var(--muted)}
+  .cover .bar{height:6mm;background:var(--box);margin:10mm 0}
+  .cover dl{display:grid;grid-template-columns:35mm 1fr;gap:2mm 6mm;font-size:10pt}
+  .cover dt{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:8pt;padding-top:1mm}
+
+  .goal{background:var(--box);border-left:4px solid var(--accent);padding:4mm 5mm;margin:4mm 0;
+    font-size:11pt;color:var(--dark);border-radius:0 6px 6px 0}
+  .box{background:var(--soft);border-radius:8px;padding:4mm 5mm;margin:4mm 0}
+  .box h3{margin-top:0}
+
+  table{width:100%;border-collapse:collapse;margin:3mm 0 5mm;font-size:9.5pt}
+  th{text-align:left;font-weight:600;color:var(--dark);border-bottom:2px solid var(--dark);padding:2mm}
+  td{border-bottom:1px solid var(--line);padding:2mm;vertical-align:top}
+  td.num,th.num{text-align:right;white-space:nowrap}
+  tr.rec td{background:var(--box)}
+  .tag{display:inline-block;font-size:7pt;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:0 2mm;margin-left:2mm}
+  .option{border:1px solid var(--line);border-radius:8px;padding:3mm 5mm;margin-bottom:3mm;break-inside:avoid}
+  .option .price{float:right;font-weight:700;color:var(--dark)}
+  .note{font-size:8pt;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<!-- 1. COVER -->
+<section class="cover">
+  <div class="mark"><span>{{YOUR_COMPANY or <img src="{{LOGO}}" alt="">}}</span></div>
+  <div>
+    <h1>{{TITLE}}</h1>
+    <p class="sub">{{ONE_LINE_SUBTITLE, e.g. Private proposal}}</p>
+    <div class="bar"></div>
+    <dl>
+      <dt>Prepared for</dt><dd>{{CLIENT_ROLE}}, {{CLIENT_COMPANY}}</dd>
+      <dt>Prepared by</dt><dd>{{YOUR_NAME}}, {{YOUR_COMPANY}}</dd>
+      <dt>Date</dt><dd>{{DATE}}</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- 2. THE SITUATION. No intro paragraphs under headings. -->
+<section class="page-break">
+  <h2>Where you are</h2>
+  <ul>
+    <li>{{WHAT_THEY_HAVE_OR_DO_TODAY_1}}</li>
+    <li>{{WHAT_THEY_HAVE_OR_DO_TODAY_2}}</li>
+  </ul>
+
+  <h2>What you asked for</h2>
+  <ul>
+    <li>{{WHAT_THEY_WANT_1}}</li>
+    <li>{{WHAT_THEY_WANT_2}}</li>
+  </ul>
+
+  <div class="goal">{{GOAL: one sentence on what the work does for them}}</div>
+
+  <h2>How the work works</h2>
+  <ul class="two-col">
+    <li>{{WHO_DELIVERS_IT}}</li>
+    <li>{{HOW_HANDS_ON_IT_IS}}</li>
+    <li>{{WHAT_IS_CUSTOMISED}}</li>
+    <li>{{DELIVERY_MODE, e.g. Remote as standard, in person possible}}</li>
+    <li>{{SUPPORT_INCLUDED}}</li>
+    <li>{{WHAT_YOU_NEED_FROM_THEM}}</li>
+  </ul>
+
+  <!-- Proof box: only items the user cleared for print. Delete the whole box if none. -->
+  <div class="box">
+    <h3>{{PROOF_TITLE, e.g. Recent work}}</h3>
+    <ul>
+      <li>{{CLEARED_PROOF_1}}</li>
+      <li>{{CLEARED_PROOF_2}}</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. OPTIONS -->
+<section class="page-break">
+  <h2>Options</h2>
+  <table>
+    <thead><tr><th>Option</th><th>Included</th><th>Time</th><th>Support</th><th class="num">{{CURRENCY}}</th><th class="num">{{SECOND_CURRENCY, or delete column}}</th></tr></thead>
+    <tbody>
+      <tr><td>{{OPTION_1}}</td><td>{{INCLUDED_1}}</td><td>{{TIME_1}}</td><td>{{SUPPORT_1}}</td><td class="num">{{PRICE_1}}</td><td class="num">{{PRICE_1_B}}</td></tr>
+      <tr class="rec"><td>{{OPTION_2}}<span class="tag">Recommended</span></td><td>{{INCLUDED_2}}</td><td>{{TIME_2}}</td><td>{{SUPPORT_2}}</td><td class="num">{{PRICE_2}}</td><td class="num">{{PRICE_2_B}}</td></tr>
+      <tr><td>{{OPTION_3}}</td><td>{{INCLUDED_3}}</td><td>{{TIME_3}}</td><td>{{SUPPORT_3}}</td><td class="num">{{PRICE_3}}</td><td class="num">{{PRICE_3_B}}</td></tr>
+    </tbody>
+  </table>
+  <p class="note">{{FX_FOOTNOTE, e.g. Converted at the rate on DATE, rounded up. Delete if one currency.}}</p>
+
+  <div class="option"><span class="price">{{PRICE_1}}</span><h3>{{OPTION_1}}</h3><ul><li>{{ONE_LINE_1}}</li></ul></div>
+  <div class="option"><span class="price">{{PRICE_2}}</span><h3>{{OPTION_2}}</h3><ul><li>{{ONE_LINE_2}}</li></ul></div>
+  <div class="option"><span class="price">{{PRICE_3}}</span><h3>{{OPTION_3}}</h3><ul><li>{{ONE_LINE_3}}</li></ul></div>
+</section>
+
+<!-- 4. ADD-ONS AND NEXT STEPS -->
+<section>
+  <h2>Add-ons</h2>
+  <ul>
+    <li>{{ADD_ON_AND_PRICE}}</li>
+    <li>{{ADD_ON_LOGIC, e.g. pairs with a shared option as the lower-priced alternative to per team}}</li>
+  </ul>
+
+  <h2>Next steps</h2>
+  <ol style="margin-left:5mm">
+    <li>{{PICK_AN_OPTION}}</li>
+    <li>{{FORMAT_AND_DATES_PROPOSED_AFTER}}</li>
+    <li>{{LIMITS, e.g. sessions up to 3 hours, all within two weeks}}</li>
+  </ol>
+
+  <!-- Only if customised options are offered. -->
+  <div class="box">
+    <h3>If you choose a customised option, I'll need</h3>
+    <ul>
+      <li>{{INPUT_NEEDED_1}}</li>
+      <li>{{INPUT_NEEDED_2}}</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

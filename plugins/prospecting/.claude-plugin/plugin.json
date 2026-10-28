@@ -1,0 +1,19 @@
+{
+  "name": "prospecting",
+  "displayName": "Prospecting",
+  "version": "0.1.0",
+  "description": "Find where your buyers are and who is worth contacting: Reddit communities and threads, ranked lead lists against your ICP, and personas from form or webinar sign-ups. From the NotLinear AI Growth Systems Bootcamp.",
+  "author": {
+    "name": "NotLinear",
+    "url": "https://www.notlinear.ai"
+  },
+  "homepage": "https://maven.com/pietro-montaldo/ai-growth-system-bootcamp-claude",
+  "license": "MIT",
+  "keywords": [
+    "prospecting",
+    "lead-gen",
+    "reddit",
+    "icp",
+    "personas"
+  ]
+}

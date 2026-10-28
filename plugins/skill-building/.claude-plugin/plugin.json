@@ -1,0 +1,17 @@
+{
+  "name": "skill-building",
+  "displayName": "Skill Building",
+  "version": "0.1.0",
+  "description": "Audit your own Claude skills and upgrade older ones for Claude 5 models. From the NotLinear AI Growth Systems Bootcamp.",
+  "author": {
+    "name": "NotLinear",
+    "url": "https://www.notlinear.ai"
+  },
+  "homepage": "https://maven.com/pietro-montaldo/ai-growth-system-bootcamp-claude",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "claude",
+    "audit"
+  ]
+}

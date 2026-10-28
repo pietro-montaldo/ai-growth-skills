@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+# Your own context and outputs never belong in the public repo
+gtm-hub.md
+gtm/
+outputs/

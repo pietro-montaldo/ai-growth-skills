@@ -1,0 +1,17 @@
+{
+  "name": "newsletter",
+  "displayName": "Newsletter",
+  "version": "0.1.0",
+  "description": "Turn your raw notes, links and posts into a newsletter edition with subject lines, in your own voice. From the NotLinear AI Growth Systems Bootcamp.",
+  "author": {
+    "name": "NotLinear",
+    "url": "https://www.notlinear.ai"
+  },
+  "homepage": "https://maven.com/pietro-montaldo/ai-growth-system-bootcamp-claude",
+  "license": "MIT",
+  "keywords": [
+    "newsletter",
+    "email",
+    "content"
+  ]
+}

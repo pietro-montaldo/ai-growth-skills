@@ -1,0 +1,19 @@
+{
+  "name": "linkedin",
+  "displayName": "LinkedIn",
+  "version": "0.1.0",
+  "description": "Write and review LinkedIn posts, track what works each week, turn calls into posts, and turn a post's commenters into a ranked lead list. From the NotLinear AI Growth Systems Bootcamp.",
+  "author": {
+    "name": "NotLinear",
+    "url": "https://www.notlinear.ai"
+  },
+  "homepage": "https://maven.com/pietro-montaldo/ai-growth-system-bootcamp-claude",
+  "license": "MIT",
+  "keywords": [
+    "linkedin",
+    "content",
+    "hooks",
+    "analytics",
+    "leads"
+  ]
+}
