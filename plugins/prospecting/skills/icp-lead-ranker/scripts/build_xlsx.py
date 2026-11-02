@@ -1,6 +1,6 @@
 """Build a ranked Excel workbook from a leads.json produced by the icp-lead-ranker skill.
 
-Needs openpyxl (pip install openpyxl).
+Needs openpyxl (python3 -m pip install --user openpyxl).
 
 Usage:
     python3 build_xlsx.py <leads.json> <output_dir>

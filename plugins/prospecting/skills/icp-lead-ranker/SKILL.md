@@ -2,7 +2,7 @@
 name: icp-lead-ranker
 description: "Take a file of potential leads, research each one with parallel sub-agents, score them 0 to 5 against your ICP, and return a ranked Excel workbook (an overview sorted by fit plus one detail tab per lead) and a short chat summary. Reads your ICP from your GTM context first, and pushes back if it's too vague to score against. Works with web research only; enrichment tools are optional and only used after a credit check. Use for \"are these in my ICP\", \"rank these leads\", \"score this list against my ICP\", \"qualify these leads\", \"who in this file is a fit\", \"sort this list by fit\", or when you hand over a spreadsheet of people and want them ranked. Not for one named lead (too heavy for one person), not for defining your ICP (use the GTM Context Kit's gtm-icp skill) and not for sending outreach."
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # ICP Lead Ranker
@@ -16,6 +16,7 @@ You hand over a file of leads. You get back a ranked workbook: an Overview tab s
 - `references/icp-and-scoring.md`: how to turn your ICP into a scoring card, the vague-ICP check, the 0 to 5 scale and the tie-breaks.
 - `references/research-brief.md`: the brief each research sub-agent gets, and the dossier it returns.
 - `scripts/build_xlsx.py`: builds the ranked workbook from `leads.json`. Needs `openpyxl`.
+- `references/setup-check.md`: run it before the script. It checks Python and `openpyxl` and installs what's missing with you.
 
 ## Before starting
 

@@ -2,7 +2,7 @@
 name: linkedin-comment-lead-pipeline
 description: "Turn the people who commented on (and, if you want, reacted to) a LinkedIn post into a ranked lead list scored against your own ICP, plus short DM drafts in your voice for the best fits. Works from a post URL with Apify, or from a commenters list you paste or export. Enrichment is optional and always asked first. Use for \"turn this post into leads\", \"who commented and are they ICP\", \"scrape the commenters on this post\", \"build a lead list from my post\", \"score these commenters and write DMs\", or pasting a LinkedIn post URL to prospect from it. Not for scraping a single profile, building a cold list from scratch, or sending messages."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # LinkedIn comment lead pipeline
@@ -19,6 +19,7 @@ The flow: get the engagers, separate people from company pages and the author, g
 - `references/scraping-and-enrichment.md`: Apify runs (one post, several posts, reactors), the paste and export fallback, and enrichment rules.
 - `references/dms.md`: how to write the DM template in your voice.
 - `scripts/build_deliverables.py`: builds the files from `leads.json`. Call it by its full path in this skill's folder.
+- `references/setup-check.md`: run it before the script. It checks Python and `openpyxl` (for the .xlsx) and installs what's missing with you.
 
 ## Before starting
 
@@ -83,7 +84,7 @@ Show the top 10 leads (fit, role, company, reason) and the counts per score. Ask
 python3 <this skill's folder>/scripts/build_deliverables.py <that folder>/leads.json <that folder>
 ```
 
-It writes `<slug>-leads-ranked.csv`, `<slug>-leads-ranked.xlsx` (only if `openpyxl` is installed; ask before installing it) and `<slug>-dms.md`. Share the file paths.
+It writes `<slug>-leads-ranked.csv`, `<slug>-leads-ranked.xlsx` (only if `openpyxl` is installed; the setup check offers it) and `<slug>-dms.md`. Share the file paths.
 
 To change the offer later, update `meta` and every `dm` in `leads.json` and run the script again. Don't scrape again.
 

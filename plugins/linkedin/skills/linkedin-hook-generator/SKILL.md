@@ -2,7 +2,7 @@
 name: linkedin-hook-generator
 description: "Write scroll-stopping LinkedIn hooks (the lines before \"see more\") in your own voice. Finds the one thing the reader gets from your post, writes 10 hooks with different formulas and exact character counts, then 3 variations of the one you pick. Use for \"write me hooks\", \"hook ideas for this post\", \"opening line for LinkedIn\", \"how should I start this post\", \"LinkedIn post about [topic]\", or when you share a topic or a draft and need a strong opening. Not for reviewing a full draft (use linkedin-post-reviewer) or writing the whole post from a call (use session-to-linkedin-post)."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # LinkedIn hook generator
@@ -13,6 +13,7 @@ The hook is the first 1 or 2 lines of a post, before LinkedIn cuts it off with "
 
 - `references/formula-library.md`: the two-line structure, 11 hook formulas with example hooks, the output format and edge cases. Read it before Step 3.
 - `scripts/count_chars.py`: exact character counts for each hook. Call it by its full path in this skill's folder.
+- `references/setup-check.md`: run it before the script. It checks Python and installs it with you if it's missing.
 
 ## Before starting
 

@@ -2,7 +2,7 @@
 name: pre-call-brief
 description: "Research the people and company on your next sales call and turn it into a short briefing PDF plus a slide deck you can glance at during the call. Tells a first call from a follow-up and shapes the brief to match, runs a research waterfall (CRM, email, call recordings, web, LinkedIn) where every source is optional, keeps a sourced fact log, and styles both files in your brand colours or a clean default. Use for \"prep my next call\", \"who am I talking to tomorrow\", \"pre-call brief\", \"call prep for Acme\", \"get me ready for the 3pm demo\", or any upcoming sales conversation you want context on. Not for writing the follow-up after the call (use call-followup-email) or for researching a whole lead list."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Pre-call brief
@@ -17,6 +17,7 @@ Works best with: a calendar, your CRM, your email, your call recorder (Fathom, G
 - `references/brief-data-schema.md`: the JSON the PDF script reads, with a filled example. Read it before step 7.
 - `references/brand.md`: the default palette and how to use your own brand instead. Read it before step 6.
 - `scripts/build_brief_pdf.py`: renders the PDF from the JSON. Call it by its full path in this skill's folder.
+- `references/setup-check.md`: run it before the script. It checks Python and installs it with you if it's missing.
 - `assets/slides-template.html`: the deck template.
 
 ## Before starting
@@ -74,7 +75,7 @@ Save both in your working folder (or `outputs/`), named `YYYY-MM-DD-<company>-ca
 python3 <this skill folder>/scripts/build_brief_pdf.py brief.json YYYY-MM-DD-<company>-call-brief.pdf
 ```
 
-Section order: header, objective, company profile with 2 or 3 big stats, who's on the call, relationship history (or why this call, for a first call) with open commitments, 3 to 5 talking points, risks, 3 to 5 questions that prove you did your homework. If WeasyPrint is missing, the script saves an HTML file instead. Tell you to open it in a browser and print to PDF, or offer to install WeasyPrint (`pip install weasyprint`).
+Section order: header, objective, company profile with 2 or 3 big stats, who's on the call, relationship history (or why this call, for a first call) with open commitments, 3 to 5 talking points, risks, 3 to 5 questions that prove you did your homework. If WeasyPrint (the PDF library) is missing, the script saves an HTML file instead. Ask you to open it in a browser and print it, choosing Save as PDF. Don't install WeasyPrint for you: it needs extra system libraries that a normal Python install can't add.
 
 **Deck.** Copy `assets/slides-template.html`, fill the placeholders, keep it one self-contained file. One idea per slide, large type: title, company snapshot, who's who, history or hypothesis, talking points, questions and the top risk.
 
