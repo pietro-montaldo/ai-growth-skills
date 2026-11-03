@@ -28,6 +28,7 @@ To try locally: `/plugin marketplace add ./` then `/plugin install <plugin>@ai-g
 - Every connector step has a paste or export fallback. Steps that spend credits ask first.
 - Skills draft; they never send, post or publish. Every write has an approval pause.
 - New skills go in the plugin for their topic and get a row in the README table.
+- Every skill that runs a script has `references/setup-check.md` and lists it under Reference files ("run it before the script", naming any package it needs). The copies must stay identical: edit one, copy it to the others, then check with `md5 -q plugins/*/skills/*/references/setup-check.md | sort -u` (one line). A new script-running skill gets a copy too.
 
 ## Writing style
 

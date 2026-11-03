@@ -2,7 +2,7 @@
 name: reddit-comment-opportunities
 description: "Find the Reddit posts worth commenting on this week, work out how each one turns into business, and draft the comments. Takes your list of subreddits (Excel, CSV or Google Sheet), sweeps each community's newest and top-of-week posts (with Apify, or a browser if you don't have it), scores them against what you sell, and returns an Excel workbook with up to 3 posts per community, a read on what each community is talking about, a brief and a draft comment for each, and a leads sheet for people worth a direct message. Use for \"find Reddit posts to comment on\", \"Reddit comment opportunities\", \"rank Reddit posts by fit\", \"weekly Reddit outreach\", \"which threads should I reply to\", or when you hand over a sheet of subreddits and want comment drafts. Not for finding which subreddits to be in (use reddit-subreddit-finder first) and not for posting or sending anything."
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Reddit Comment Opportunities
@@ -22,6 +22,7 @@ Turn a list of subreddits into a weekly shortlist of posts worth replying to, wi
 - `references/scoring-rubric.md`: the 30-point rubric, risk deductions, thresholds.
 - `references/comment-playbook.md`: what a comment must deliver, the anti-slop filter, search and local angles, mention modes, DMs, honesty rules.
 - `scripts/build_workbook.py`: JSON to formatted Excel workbook. Needs `openpyxl`.
+- `references/setup-check.md`: run it before the script. It checks Python and `openpyxl` and installs what's missing with you.
 
 ## Before starting
 

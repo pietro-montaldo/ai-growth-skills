@@ -2,7 +2,7 @@
 name: respondent-persona
 description: "Build a persona from a list of people who signed up for something: webinar or event registrants, lead-magnet downloads, waitlist sign-ups, form fills or survey respondents. Does light, web-only research per person with parallel sub-agents, then gives you one composite 'average person' plus how the list spreads across seniority, function, industry, company size and region, with the unknowns shown honestly. The persona describes roles and company types, never individuals. Use for \"create a persona from this list\", \"who signed up for my webinar\", \"who are the people who filled this form\", \"profile my respondents\", \"who is on my waitlist\", \"what's the average person on this list\", \"build an audience persona\". Not for deep research on one lead, not for scoring leads against your ICP (use icp-lead-ranker), and not for analysing what people wrote in their survey answers."
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Respondent Persona
@@ -19,6 +19,7 @@ It works the same for webinar and event registrants, lead-magnet sign-ups, waitl
 - `references/research-agent-prompt.md`: the brief each research sub-agent gets.
 - `references/persona-template.md`: the layout of the persona doc.
 - `scripts/build_persona_outputs.py`: builds the spread workbook and CSV from `respondents.json`. Needs `openpyxl`.
+- `references/setup-check.md`: run it before the script. It checks Python and `openpyxl` and installs what's missing with you.
 
 ## Before starting
 

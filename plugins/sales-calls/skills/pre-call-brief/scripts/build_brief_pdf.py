@@ -266,12 +266,13 @@ def main():
     base = os.path.dirname(os.path.abspath(src))
     try:
         from weasyprint import HTML
-    except ImportError:
+    except (ImportError, OSError):
+        # OSError: WeasyPrint is installed but its system libraries are not.
         html_out = os.path.splitext(out)[0] + ".html"
         with open(html_out, "w", encoding="utf-8") as f:
             f.write(doc)
-        print("WeasyPrint is not installed. Wrote", html_out)
-        print("Open it in a browser and print to PDF, or install WeasyPrint: pip install weasyprint")
+        print("WeasyPrint is not available. Wrote", html_out)
+        print("Open it in a browser and print it, choosing Save as PDF.")
         return
     HTML(string=doc, base_url=base).write_pdf(out)
     print("Wrote", out)

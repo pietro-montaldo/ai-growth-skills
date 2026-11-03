@@ -60,6 +60,16 @@ Nothing is required. Every step that uses a tool also works if you paste the dat
 
 Skills that spend credits (Apify, enrichment) tell you how many runs they need and ask first.
 
+## Missing tools
+
+A few skills run a small Python script to count characters or build an Excel, CSV or PDF file. You don't need to install anything first. Before the first script, Claude checks for what the skill needs. If something is missing, Claude asks, then installs it with you in the same session:
+
+- **Python on a Mac:** it comes with Apple's free Command Line Tools. A window from Apple opens: click Install, then Agree. It takes 5 to 15 minutes.
+- **Python on Windows:** Claude installs it with `winget`, which is built into Windows. Click Yes if Windows asks to allow changes.
+- **The Excel package:** the skills that build Excel files need `openpyxl`, a free Python package. Claude installs it for you in under a minute. No password needed.
+
+You never type a command, and you never share a password in the chat. Say no and the skill still works: you get a CSV or a table in the chat instead of the Excel file. The pre-call brief PDF needs a library that Claude doesn't install. Without it you get the brief as a web page that you save as a PDF from your browser.
+
 ## The rules every skill keeps
 
 - **It drafts, you send.** No skill sends an email, posts a comment, publishes or schedules anything.

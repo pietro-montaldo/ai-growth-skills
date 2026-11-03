@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the respondent-persona spread outputs from respondents.json.
 
-Needs openpyxl (pip install openpyxl).
+Needs openpyxl (python3 -m pip install --user openpyxl).
 
 Usage:
     python3 build_persona_outputs.py respondents.json output_dir [--anonymous]
