@@ -1,8 +1,8 @@
 {
   "name": "prospecting",
   "displayName": "Prospecting",
-  "version": "0.2.0",
-  "description": "Find where your buyers are and who is worth contacting: Reddit communities and threads, ranked lead lists against your ICP, and personas from form or webinar sign-ups. From the NotLinear AI Growth Systems Bootcamp.",
+  "version": "0.3.0",
+  "description": "Find where your buyers are and who is worth contacting: Reddit communities and threads, ranked lead lists against your ICP, personas from form or webinar sign-ups, and a Clay system that watches lookalike companies for buying signals and finds the person to contact. From the NotLinear AI Growth Systems Bootcamp.",
   "author": {
     "name": "NotLinear",
     "url": "https://www.notlinear.ai"
@@ -14,6 +14,8 @@
     "lead-gen",
     "reddit",
     "icp",
-    "personas"
+    "personas",
+    "clay",
+    "signals"
   ]
 }

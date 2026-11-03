@@ -19,7 +19,7 @@ No GTM context yet? Every skill still works. It asks a few questions the first t
 | **linkedin** | `linkedin-hook-generator`, `linkedin-post-reviewer`, `linkedin-weekly-review`, `session-to-linkedin-post`, `linkedin-comment-lead-pipeline` | Hooks and posts in your voice, a scored review before you publish, a weekly read on what worked, posts drafted from your calls, and a ranked lead list from the people who commented on a post |
 | **newsletter** | `newsletter-writer` | A full edition from your raw notes and links, with subject lines |
 | **sales-calls** | `pre-call-brief`, `sales-call-coach`, `call-followup-email`, `proposal-from-call`, `webinar-followup-email`, `inbound-triage` | A brief before the call, coaching after it, the follow-up email and the proposal, webinar follow-ups for attendees and no-shows, and a weekly review of who reached out |
-| **prospecting** | `reddit-subreddit-finder`, `reddit-comment-opportunities`, `icp-lead-ranker`, `respondent-persona` | The communities where your buyers are and the threads worth answering, a lead list ranked against your ICP, and a buyer persona from your sign-ups |
+| **prospecting** | `reddit-subreddit-finder`, `reddit-comment-opportunities`, `icp-lead-ranker`, `respondent-persona`, `clay-company-signals` | The communities where your buyers are and the threads worth answering, a lead list ranked against your ICP, a buyer persona from your sign-ups, and a Clay system that watches lookalikes of your best customer for buying signals and finds the person to contact |
 | **skill-building** | `skill-auditor`, `skill-model5-upgrade` | An audit of any skill against best practices, and an upgrade for skills written for older Claude models |
 
 ## Install
@@ -57,6 +57,7 @@ Nothing is required. Every step that uses a tool also works if you paste the dat
 | Browser (Claude in Chrome) | LinkedIn weekly review, Reddit finder |
 | Apify | LinkedIn comment pipeline, Reddit comment opportunities |
 | Enrichment (Clay, Apollo) | lead ranking and the comment pipeline, optional |
+| Clay CLI (Search, Signals, Workflows, Campaigns) | company signals |
 
 Skills that spend credits (Apify, enrichment) tell you how many runs they need and ask first.
 
